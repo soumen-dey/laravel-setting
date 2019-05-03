@@ -1,0 +1,41 @@
+{
+    "name": "soumen-dey/laravel-setting",
+    "description": "A lightweight and simple package for database based key-value store for Laravel 5.6 and above.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Soumen Dey",
+            "email": "soumendeyemail@gmail.com",
+            "homepage": "http://soumendey.com"
+        }
+    ],
+    "homepage": "https://github.com/soumen-dey/laravel-setting",
+    "keywords": ["Laravel", "Setting", "Key-Value Store"],
+    "require": {
+        "illuminate/support": "~5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Soumen\\Setting\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Soumen\\Setting\\SettingServiceProvider"
+            ],
+            "aliases": {
+                "Setting": "Soumen\\Setting\\Facades\\Setting"
+            }
+        }
+    }
+}
