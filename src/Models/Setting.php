@@ -12,6 +12,6 @@ class Setting extends Model
     {
         parent::__construct($attributes);
 
-        $this->setTable(config('laravel-settings.database_table_name'));
+        $this->setTable(config('laravel-setting.database_table_name'));
     }
 }
