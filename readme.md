@@ -17,7 +17,7 @@ $ composer require soumen-dey/laravel-setting
 
 The migrations will be loaded automatically, just run `php artisan migrate`.
 
-If you want, you can publish the config file.
+Publish the config file.
 
 ``` bash
 php artisan vendor:publish --provider="Soumen\Setting\SettingServiceProvider" --tag="config"
