@@ -14,10 +14,6 @@ if (!function_exists('setting')) {
     {
         $setting = new Setting;
 
-        if (!is_null($key) && is_null($value)) {
-            return new Setting($key);
-        }
-
         if (!is_null($value)) {
             // set the setting value
             $setting->set($key, $value);
