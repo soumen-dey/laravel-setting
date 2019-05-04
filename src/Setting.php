@@ -72,7 +72,7 @@ class Setting
             $key = $this->getKey();
         }
 
-        $setting = Cache::remember($this->getCacheNameForKey(), config('laravel-setting.cache_duration'), function () use ($key) {
+        $setting = Cache::remember($this->getCacheNameForKey($key), config('laravel-setting.cache_duration'), function () use ($key) {
             return SettingStore::where('key', $key)->first();
         });
 
@@ -197,12 +197,8 @@ class Setting
      * @return String
      * @author Soumen Dey
      */
-    public function getCacheNameForKey($key = null)
+    public function getCacheNameForKey($key)
     {
-        if (!$key) {
-            $key = $this->getKey();
-        }
-
         return config('laravel-setting.cache_prefix') . '.' . $key;
     }
 
