@@ -3,6 +3,7 @@
 namespace Soumen\Setting;
 
 use Illuminate\Support\Facades\Cache;
+use Soumen\Setting\Exceptions\InvalidSettingValue;
 use Soumen\Setting\Models\Setting as SettingStore;
 
 class Setting
