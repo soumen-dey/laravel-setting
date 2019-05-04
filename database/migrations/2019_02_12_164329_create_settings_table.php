@@ -13,7 +13,7 @@ class CreateSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('laravel-setting.database_table'), function (Blueprint $table) {
+        Schema::create(config('laravel-setting.database_table_name'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('key');
             $table->text('value');
@@ -28,6 +28,6 @@ class CreateSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('laravel-setting.database_table'));
+        Schema::dropIfExists(config('laravel-setting.database_table_name'));
     }
 }
